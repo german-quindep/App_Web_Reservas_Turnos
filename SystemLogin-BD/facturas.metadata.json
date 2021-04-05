@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"SystemLogin-BD.facturas"}],"uuid":"c4b5f2809240483d9033bbdf89c54bfc"}
