@@ -1,0 +1,61 @@
+<!--- PLANTILLA DE LA PAGINA --->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>SystemLogin</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--PDF--->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+ <script src="https://unpkg.com/jspdf-autotable"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--FONTAWESOME-->
+  <script src="https://kit.fontawesome.com/c9488ac335.js" crossorigin="anonymous"></script>
+  <!--LINK DE CSS-->
+  <link rel="stylesheet" href="/css/main.css">
+  <!--DATATABLE PARA YA DARLE EL USO-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
+</head>
+<body>
+  
+  {{> navegacion}}
+
+    <!--PARA LLAMAR AL MENSAJE DE CORRECTO O ERROR-->
+    {{> mensajes}}
+    <!--PARA LLAMAR LOS ERRORES-->
+    {{> error}}
+
+    <!--AQUI VA LO QUE TIENE EL INDEX, ABOUT , ETC CON EXTENSION HBS-->
+    {{{body}}}
+<br>
+<br>
+<br>
+<br>
+  {{> footer}}
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!---DATATABLES--->
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!---IMPORTANDO LOS DaTATBALES--->
+  {{>datatable}}
+  {{>datatablesConsultas}}
+</body>
+
+</html>

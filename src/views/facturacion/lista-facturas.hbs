@@ -1,0 +1,39 @@
+<div class="container py-4">
+<table id="listar-factura" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Descripcion</th>
+            <th>Total a Pagar</th>
+            <th>Fecha</th>
+            <th>Empleado</th>
+            <th>Cliente</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each facturas}}
+        <tr>
+            <td>{{Descripcion}}</td>
+            <td>{{Total_Pagar}}</td>
+            <td>{{#niceDate Fecha}}{{/niceDate}}</td>
+            <td>{{id_Empleado}}</td>
+            <td>{{id_Reserva}}</td>
+        </tr>
+        {{else}}
+        <tr>
+            <td>
+                <h3>No hay factura aun</h3>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Descripcion</th>
+            <th>Total a Pagar</th>
+            <th>Fecha</th>
+            <th>Empleado</th>
+            <th>Cliente</th>
+        </tr>
+    </tfoot>
+</table>
+</div>

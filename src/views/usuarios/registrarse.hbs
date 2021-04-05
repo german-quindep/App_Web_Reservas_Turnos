@@ -1,0 +1,41 @@
+<div class="container p-4">
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Registrarse</h3>
+            </div>
+            <div class="card-body">
+                <form action="/usuarios/registrarse" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Nombre" placeholder="Escribe tu Nombre" autofocus
+                            value="{{Nombre}}" onkeypress="return sololetras(event)" onpaste="return false">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Cedula" placeholder="Escribe tu cedula"
+                            value="{{Cedula}}" onkeypress="return solonumeros(event)" onpaste="return false">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="Correo" placeholder="Escribe tu correo"
+                            value="{{Correo}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="Contrasena"
+                            placeholder="Escribe tu Contraseña" value="{{Contrasena}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="Confi_Contrasena"
+                            placeholder="Escribe tu Contraseña" value="{{Confi_Contrasena}}">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            Registrar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/validaciones/validar.js"></script>

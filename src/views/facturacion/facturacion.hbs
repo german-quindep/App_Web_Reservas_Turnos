@@ -1,0 +1,48 @@
+<!--DISEÑO-->
+<div class="container py-4">
+    <div class="col-md-4 mx-auto border">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Factura</h3>
+            </div>
+            <div class="card-body">
+                <!---FORMULARIO-->
+                <form action="/facturacion/nueva-factura" method="POST">
+                    {{#each reservas}}
+                    <input type="hidden" name="id_Reserva" value="{{_id}}">
+                    {{/each}}
+                    <div class="form-group">
+                        <label for="txDescripcion">Descripcion</label>
+                        <textarea name="Descripcion" id="txDescripcion" class="form-control"
+                            placeholder="Solucion del Problema" autofocus>{{Descripcion}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTotal">Total a pagar</label>
+                        <input type="text" name="Total_Pagar" id="txtTotal" class="form-control"
+                            placeholder="Total a pagar" value="{{Total_Pagar}}">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit" id="btn">
+                            Facturar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    var descripcion = document.getElementById('txDescripcion');
+    var total = document.getElementById('txtTotal');
+    btn.addEventListener('click', (e) => {
+        if (descripcion.value <= 0 || !descripcion.value) {
+            alert('Falta llenar el campo descripcion');
+            e.preventDefault();
+        }
+        if (total.value <= 0 || !total.value) {
+            alert('Falta llenar el campo total');
+            e.preventDefault();
+        }
+    });
+</script>

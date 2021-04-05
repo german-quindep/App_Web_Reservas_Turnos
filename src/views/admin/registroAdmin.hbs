@@ -1,0 +1,47 @@
+<div class="container py-4">
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Registrarse</h3>
+            </div>
+            <div class="card-body">
+                <form action="/admin/registroAdmin" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Nombre" placeholder="Escribe Nombre" autofocus
+                            value="{{Nombre}}">
+                    </div>
+                     <div class="form-group">
+                        <input type="text" class="form-control" name="Cedula" placeholder="Escribe cedula"
+                            value="{{Cedula}}" onkeypress="return solonumeros(event)" onpaste="return false">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="Correo" placeholder="Escribe correo"
+                            value="{{Correo}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="Contrasena"
+                            placeholder="Escribe Contraseña" value="{{Contrasena}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="Confi_Contrasena"
+                            placeholder="Escribe Contraseña" value="{{Confi_Contrasena}}">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" name="Rol">
+                            <option value="Administrador">Administrador</option>
+                            <option value="Empleado">Empleado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            Registrar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/validaciones/validar.js"></script>

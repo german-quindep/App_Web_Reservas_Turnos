@@ -1,0 +1,41 @@
+<div class="container py-4">
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Reserva</h3>
+        </div>
+        <div class="card-body">
+            <!---DEBO DE ENVIAR LA RUTA CON EL ID DE LA RESERVA Y ENVIARLO POR METODO PUT
+            ASI ESTE EL POST PERO IGUAL SE ENVIA POR PUT
+            -->
+            <form action="/reservas/editar-reservas/{{reserva._id}}?_method=PUT" method="POST">
+            <!---PARA VALIDAR LA PETICION PUT o DELETE-->
+            <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <label for="txtNombre">Nombre del Equipo</label>
+                    <input type="text" name="Nombre_equipo" id="txtNombre" class="form-control" placeholder="Nombre del Equipo" autofocus
+                     value="{{reserva.Nombre_equipo}}">
+                </div>
+                 <div class="form-group">
+                     <label for="txtMarca">Marca del Equipo</label>
+                    <input type="text" name="Marca_equipo" id="txtMarca"class="form-control" placeholder="Marca del Equipo"
+                     value="{{reserva.Marca_equipo}}">
+                </div>
+                <div class="form-group">
+                    <label for="txtDescripcion">Descripcion del Problema</label>
+                    <textarea name="Descripcion_Problema" id="txtDescripcion" class="form-control">{{reserva.Descripcion_Problema}}</textarea>
+                </div>
+                <div class="form-group">
+              <label for="txtDia">Dia de la Reserva</label>
+              <input type="datetime-local" name="Reserva_Dia" id="txtDia" class="form-control" placeholder="aaa/mm/dd HH.MM.SS"
+              value="{{reserva.Reserva_Dia}}">
+          </div>
+          <div class="form-group">
+             <button class="btn btn-primary btn-block" type="submit">
+                 Editar Reserva
+             </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
