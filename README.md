@@ -8,10 +8,12 @@ ademas base de datos mongodb
 tiene relaciones las tablas, ademas respectivos usuarios como admin,empleado,cliente
 para ingresar como admin  el usuario es el siguiente
 user:  german@hotmail.com
-contraseña : 1234
-ingreso de empleado
-usuario:  juan@hotmail.com
+contraseña :  12345
+para ingresar como empleado el usuario es el siguiente
+usuario: juan@hotmail.com
 contraseña: 12345
-ingrso de cliente
-usuario: pepe@hotmail.com
-contraseña: 1234
+para ingresar como cliente el usuario es el siguiente
+usuario: steven@hotmail.com
+contraseña: 12345
+
+para utilizar los usuarios mencionados anteriormente es necesario importar la base de datos que se deja en el reposotirio
